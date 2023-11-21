@@ -2,12 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                bat 'mvn.bat clean install'
+                checkout scm
             }
         }
-
-        // Add more stages for additional tasks (e.g., testing, deployment)
+        stage('Build') {
+            steps {
+                sh 'mvn clean'
+            }
+        }
     }
 }
