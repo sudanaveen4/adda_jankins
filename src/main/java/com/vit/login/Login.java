@@ -24,7 +24,7 @@ public class Login {
         if (loggedIn) {
             System.out.println("Login successful!");
         } else {
-            System.out.println("Login faileds.");
+            System.out.println("Login failed.");
         }
     }
 }
